@@ -1,14 +1,14 @@
 const brawlers = [
-  { name: 'Shelly', rarity: 'commune', type: 'degats', range: 'moyen', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: true },
-  { name: 'Colt', rarity: 'commune', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: false },
-  { name: 'Bull', rarity: 'rare', type: 'tank', range: 'proche', ranged: false, healer: false, invisible: false, tank: true, robot: false, weapon: true, area: true },
-  { name: 'Jessie', rarity: 'rare', type: 'controle', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: true },
-  { name: 'Brock', rarity: 'rare', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: true },
-  { name: 'Poco', rarity: 'rare', type: 'support', range: 'moyen', ranged: true, healer: true, invisible: false, tank: false, robot: false, weapon: false, area: true },
-  { name: 'El Primo', rarity: 'rare', type: 'tank', range: 'proche', ranged: false, healer: false, invisible: false, tank: true, robot: false, weapon: false, area: true },
-  { name: 'Spike', rarity: 'legendary', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: false, area: true },
-  { name: 'Leon', rarity: 'legendary', type: 'assassin', range: 'moyen', ranged: true, healer: false, invisible: true, tank: false, robot: false, weapon: false, area: false },
-  { name: 'Rico', rarity: 'super rare', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: true, weapon: true, area: false }
+  { name: 'Shelly', rarity: 'commune', gender: 'fille', hair: 'violet', style: 'humain', health: 'moyen', type: 'degats', range: 'moyen', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: true, stun: true, superHeal: false, shield: false, poison: false, slow: true, summon: false, dash: false, pierce: false, bounce: false, wallBreak: true, thrower: false, fast: false },
+  { name: 'Colt', rarity: 'commune', gender: 'garcon', hair: 'rouge', style: 'humain', health: 'faible', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: false, stun: false, superHeal: false, shield: false, poison: false, slow: false, summon: false, dash: false, pierce: false, bounce: false, wallBreak: true, thrower: false, fast: false },
+  { name: 'Bull', rarity: 'rare', gender: 'garcon', hair: 'noir', style: 'humain', health: 'fort', type: 'tank', range: 'proche', ranged: false, healer: false, invisible: false, tank: true, robot: false, weapon: true, area: true, stun: false, superHeal: false, shield: false, poison: false, slow: false, summon: false, dash: true, pierce: false, bounce: false, wallBreak: true, thrower: false, fast: false },
+  { name: 'Jessie', rarity: 'rare', gender: 'fille', hair: 'roux', style: 'humain', health: 'moyen', type: 'controle', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: true, stun: false, superHeal: false, shield: false, poison: false, slow: false, summon: true, dash: false, pierce: false, bounce: true, wallBreak: false, thrower: false, fast: false },
+  { name: 'Brock', rarity: 'rare', gender: 'garcon', hair: 'noir', style: 'humain', health: 'faible', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: true, area: true, stun: false, superHeal: false, shield: false, poison: false, slow: false, summon: false, dash: false, pierce: false, bounce: false, wallBreak: true, thrower: false, fast: false },
+  { name: 'Poco', rarity: 'rare', gender: 'garcon', hair: 'aucun', style: 'squelette', health: 'moyen', type: 'support', range: 'moyen', ranged: true, healer: true, invisible: false, tank: false, robot: false, weapon: false, area: true, stun: false, superHeal: true, shield: false, poison: false, slow: false, summon: false, dash: false, pierce: true, bounce: false, wallBreak: false, thrower: false, fast: false },
+  { name: 'El Primo', rarity: 'rare', gender: 'garcon', hair: 'bleu', style: 'humain', health: 'fort', type: 'tank', range: 'proche', ranged: false, healer: false, invisible: false, tank: true, robot: false, weapon: false, area: true, stun: true, superHeal: false, shield: false, poison: false, slow: false, summon: false, dash: true, pierce: false, bounce: false, wallBreak: false, thrower: false, fast: false },
+  { name: 'Spike', rarity: 'legendary', gender: 'inconnu', hair: 'aucun', style: 'plante', health: 'faible', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: false, weapon: false, area: true, stun: false, superHeal: false, shield: false, poison: true, slow: true, summon: false, dash: false, pierce: false, bounce: false, wallBreak: false, thrower: false, fast: false },
+  { name: 'Leon', rarity: 'legendary', gender: 'garcon', hair: 'vert', style: 'humain', health: 'moyen', type: 'assassin', range: 'moyen', ranged: true, healer: false, invisible: true, tank: false, robot: false, weapon: false, area: false, stun: false, superHeal: false, shield: false, poison: false, slow: false, summon: false, dash: false, pierce: false, bounce: false, wallBreak: false, thrower: false, fast: true },
+  { name: 'Rico', rarity: 'super rare', gender: 'garcon', hair: 'aucun', style: 'robot', health: 'faible', type: 'degats', range: 'loin', ranged: true, healer: false, invisible: false, tank: false, robot: true, weapon: true, area: false, stun: false, superHeal: false, shield: false, poison: false, slow: false, summon: false, dash: false, pierce: true, bounce: true, wallBreak: false, thrower: false, fast: false }
 ];
 
 const knownBrawlerNames = [
@@ -22,14 +22,31 @@ const knownBrawlerNames = [
   'Chester', 'Kaze', 'Finx', 'Jae-Yong', 'Alli', 'Cosmo', 'Vince'
 ];
 
+const knownRarities = {
+  Mortis: 'mythique', Tara: 'mythique', Gene: 'mythique', Max: 'mythique', 'Mr. P': 'mythique',
+  Sprout: 'mythique', Byron: 'mythique', Squeak: 'mythique', Lou: 'mythique', Ruffs: 'mythique',
+  Buzz: 'mythique', Fang: 'mythique', Eve: 'mythique', Janet: 'mythique', Otis: 'mythique',
+  Buster: 'mythique', Gray: 'mythique', Willow: 'mythique', Doug: 'mythique', Chuck: 'mythique',
+  Charlie: 'mythique', Mico: 'mythique', Melodie: 'mythique', Lily: 'mythique', Draco: 'mythique',
+  Kenji: 'mythique', Juju: 'mythique', Meeple: 'mythique', Lumi: 'mythique', Clancy: 'mythique',
+  Kit: 'legendary', Cordelius: 'legendary', Amber: 'legendary', Meg: 'legendary', Surge: 'legendary',
+  Crow: 'legendary', Sandy: 'legendary', Chester: 'legendary', Kaze: 'legendary', Finx: 'mythique',
+  'Jae-Yong': 'mythique', Alli: 'mythique', Cosmo: 'mythique', Vince: 'mythique'
+};
+
 knownBrawlerNames.forEach((name) => {
   if (!brawlers.some((brawler) => brawler.name === name)) {
-    brawlers.push({ name, rarity: 'inconnue', type: 'inconnu' });
+    brawlers.push({ name, rarity: knownRarities[name] || 'inconnue', type: 'inconnu' });
   }
 });
 
 const questions = [
   { text: 'Est-ce un brawler légendaire ?', key: 'rarity', value: 'legendary' },
+  { text: 'Est-ce un brawler mythique ?', key: 'rarity', value: 'mythique' },
+  { text: 'Est-ce un brawler épique ?', key: 'rarity', value: 'épique' },
+  { text: 'Est-ce un brawler super rare ?', key: 'rarity', value: 'super rare' },
+  { text: 'Est-ce un brawler rare ?', key: 'rarity', value: 'rare' },
+  { text: 'Est-ce un brawler commun ?', key: 'rarity', value: 'commune' },
   { text: 'Est-ce que le brawler tire de loin ?', key: 'range', values: ['loin', 'moyen', 'proche'] },
   { text: 'Peut-il soigner ses alliés ?', key: 'healer', value: true },
   { text: 'Peut-il devenir invisible ?', key: 'invisible', value: true },
@@ -37,29 +54,75 @@ const questions = [
   { text: 'Est-ce un robot ?', key: 'robot', value: true },
   { text: 'Utilise-t-il une arme ?', key: 'weapon', value: true },
   { text: 'Son attaque fait-elle des dégâts de zone ?', key: 'area', value: true },
-  { text: 'Est-ce un brawler de soutien ?', key: 'type', value: 'support' }
+  { text: 'Est-ce un brawler de soutien ?', key: 'type', value: 'support' },
+  { text: 'A-t-il beaucoup de PV ?', key: 'health', value: 'fort' },
+  { text: 'A-t-il peu de PV ?', key: 'health', value: 'faible' },
+  { text: 'Son super peut-il étourdir (stun) ?', key: 'stun', value: true },
+  { text: 'Son super peut-il soigner ?', key: 'superHeal', value: true },
+  { text: 'Peut-il créer un bouclier ?', key: 'shield', value: true },
+  { text: 'Son attaque ou son super empoisonne-t-il ?', key: 'poison', value: true },
+  { text: 'Peut-il ralentir les ennemis ?', key: 'slow', value: true },
+  { text: 'Peut-il invoquer un allié ou une tourelle ?', key: 'summon', value: true },
+  { text: 'Son super lui permet-il de foncer ?', key: 'dash', value: true },
+  { text: 'Ses tirs peuvent-ils traverser les ennemis ?', key: 'pierce', value: true },
+  { text: 'Ses tirs peuvent-ils rebondir ?', key: 'bounce', value: true },
+  { text: 'Peut-il détruire les murs ?', key: 'wallBreak', value: true },
+  { text: 'Lance-t-il des attaques par-dessus les murs ?', key: 'thrower', value: true },
+  { text: 'Est-il très rapide ?', key: 'fast', value: true },
+  { text: 'Son attaque fait-elle des dégâts sur plusieurs ennemis ?', key: 'area', value: true },
+  { text: 'Son super est-il surtout défensif ?', key: 'shield', value: true },
+  { text: 'Est-ce un personnage de contrôle ?', key: 'type', value: 'controle' },
+  { text: 'Est-ce un assassin ?', key: 'type', value: 'assassin' },
+  { text: 'Est-ce un brawler qui combat au corps à corps ?', key: 'range', value: 'proche' },
+  { text: 'Est-ce un brawler qui utilise une tourelle ?', key: 'summon', value: true },
+  { text: 'Peut-il devenir difficile à repérer ?', key: 'invisible', value: true },
+  { text: 'Son attaque peut-elle toucher en ligne droite plusieurs fois ?', key: 'pierce', value: true },
+  { text: 'Est-il plutôt fragile ?', key: 'health', value: 'faible' }
+  , { text: 'Est-ce une fille ?', key: 'gender', value: 'fille' }
+  , { text: 'Est-ce un garçon ?', key: 'gender', value: 'garcon' }
+  , { text: 'A-t-il les cheveux noirs ?', key: 'hair', value: 'noir' }
+  , { text: 'A-t-il les cheveux rouges ou roux ?', key: 'hair', matches: ['rouge', 'roux'] }
+  , { text: 'A-t-il les cheveux bleus ?', key: 'hair', value: 'bleu' }
+  , { text: 'A-t-il les cheveux violets ?', key: 'hair', value: 'violet' }
+  , { text: 'A-t-il les cheveux verts ?', key: 'hair', value: 'vert' }
+  , { text: 'A-t-il des cheveux ?', key: 'hair', value: 'aucun', invert: true }
+  , { text: 'Est-ce un robot ?', key: 'style', value: 'robot' }
+  , { text: 'Est-ce une créature ou un monstre ?', key: 'style', matches: ['squelette', 'plante'] }
+  , { text: 'A-t-il une apparence humaine ?', key: 'style', value: 'humain' }
 ];
 
 let candidates = [];
 let askedQuestions = [];
+let answers = [];
 let currentQuestion = null;
 const gamePanel = document.querySelector('#game-panel');
 const resultPanel = document.querySelector('#result-panel');
 const questionText = document.querySelector('#question-text');
+const questionHint = document.querySelector('#question-hint');
 const questionNumber = document.querySelector('#question-number');
 const candidateCount = document.querySelector('#candidate-count');
 const progressBar = document.querySelector('#progress-bar');
 
 function chooseQuestion() {
-  const available = questions.filter((question) => !askedQuestions.includes(question));
+  const available = questions.filter((question) => isQuestionAllowed(question));
   const usefulQuestion = available
     .sort((first, second) => scoreQuestion(second) - scoreQuestion(first))
     .find((question) => scoreQuestion(question) > 0);
   if (usefulQuestion) return usefulQuestion;
+  if (askedQuestions.length < 9 && available.length > 0) return available[0];
   const nextCandidate = candidates.find((brawler) => !askedQuestions.some((question) => question.key === 'name' && question.value === brawler.name));
   return nextCandidate
     ? { text: `Est-ce ${nextCandidate.name} ?`, key: 'name', value: nextCandidate.name }
     : null;
+}
+
+function isQuestionAllowed(question) {
+  if (askedQuestions.includes(question)) return false;
+  const previousAnswers = answers.filter((answer) => answer.key === question.key);
+  if (previousAnswers.some((answer) => answer.type === 'unknown')) return false;
+  if (previousAnswers.some((answer) => answer.question === question)) return false;
+  if (previousAnswers.some((answer) => answer.type === 'yes' && !question.values)) return false;
+  return true;
 }
 
 function scoreQuestion(question) {
@@ -67,17 +130,31 @@ function scoreQuestion(question) {
     const counts = question.values.map((value) => candidates.filter((brawler) => brawler[question.key] === value).length);
     return candidates.length - Math.max(...counts);
   }
+  if (question.matches) {
+    const matches = candidates.filter((brawler) => question.matches.includes(brawler[question.key])).length;
+    return Math.min(matches, candidates.length - matches);
+  }
   const matches = candidates.filter((brawler) => brawler[question.key] === question.value).length;
   return Math.min(matches, candidates.length - matches);
 }
 
 function updateQuestion() {
-  if (candidates.length <= 1) return showResult();
+  if (candidates.length <= 1 || askedQuestions.length >= 10) return showResult();
   currentQuestion = chooseQuestion();
   if (!currentQuestion) return showResult();
   askedQuestions.push(currentQuestion);
   configureAnswerButtons();
   questionText.textContent = currentQuestion.text;
+  if (currentQuestion.key === 'health') {
+    questionHint.textContent = 'Repère : beaucoup = 7 000 PV ou plus · moyen = de 4 000 à 6 999 PV · petit = moins de 4 000 PV environ.';
+    questionHint.classList.remove('is-hidden');
+  } else if (currentQuestion.key === 'rarity') {
+    questionHint.textContent = 'Repère : commune · rare · super rare · épique · mythique · légendaire.';
+    questionHint.classList.remove('is-hidden');
+  } else {
+    questionHint.textContent = '';
+    questionHint.classList.add('is-hidden');
+  }
   questionNumber.textContent = askedQuestions.length;
   candidateCount.textContent = candidates.length;
   progressBar.style.width = `${Math.max(12, 100 - (askedQuestions.length - 1) * 13)}%`;
@@ -107,6 +184,7 @@ function configureAnswerButtons() {
 function startGame() {
   candidates = [...brawlers];
   askedQuestions = [];
+  answers = [];
   resultPanel.classList.add('is-hidden');
   gamePanel.classList.remove('is-hidden');
   updateQuestion();
@@ -114,12 +192,23 @@ function startGame() {
 
 function answer(answerType) {
   if (!currentQuestion) return;
+  answers.push({
+    key: currentQuestion.key,
+    question: currentQuestion,
+    type: currentQuestion.values ? 'value' : answerType,
+    value: currentQuestion.values ? answerType : currentQuestion.value
+  });
   if (answerType !== 'unknown') {
     candidates = candidates.filter((brawler) => {
       if (currentQuestion.values) {
         return !brawler[currentQuestion.key] || brawler[currentQuestion.key] === answerType;
       }
-      const matches = brawler[currentQuestion.key] === currentQuestion.value;
+      if (brawler[currentQuestion.key] === undefined) return true;
+      const matches = currentQuestion.matches
+        ? currentQuestion.matches.includes(brawler[currentQuestion.key])
+        : currentQuestion.invert
+        ? brawler[currentQuestion.key] !== currentQuestion.value
+        : brawler[currentQuestion.key] === currentQuestion.value;
       return answerType === 'yes' ? matches : !matches;
     });
   }
