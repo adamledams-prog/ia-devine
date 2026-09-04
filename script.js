@@ -11,6 +11,23 @@ const brawlers = [
   { name: 'Rico', rarity: 'super rare', type: 'degats', ranged: true, healer: false, invisible: false, tank: false, robot: true, weapon: true, area: false }
 ];
 
+const knownBrawlerNames = [
+  'Nita', 'Barley', 'Rosa', 'Dynamike', 'Tick', '8-Bit', 'Darryl', 'Penny', 'Carl', 'Jacky',
+  'Gus', 'Bo', 'Emz', 'Stu', 'Piper', 'Pam', 'Frank', 'Bibi', 'Bea', 'Nani', 'Edgar', 'Griff',
+  'Grom', 'Bonnie', 'Gale', 'Colette', 'Belle', 'Ash', 'Lola', 'Sam', 'Mandy', 'Maisie', 'Hank',
+  'Pearl', 'Larry & Lawrie', 'Angelo', 'Berry', 'Mortis', 'Tara', 'Gene', 'Max', 'Mr. P', 'Sprout',
+  'Byron', 'Squeak', 'Lou', 'Ruffs', 'Buzz', 'Fang', 'Eve', 'Janet', 'Otis', 'Buster', 'Gray',
+  'Willow', 'Doug', 'Chuck', 'Charlie', 'Mico', 'Melodie', 'Lily', 'Draco', 'Kenji', 'Juju',
+  'Meeple', 'Lumi', 'Clancy', 'Kit', 'Cordelius', 'R-T', 'Amber', 'Meg', 'Surge', 'Crow', 'Sandy',
+  'Chester', 'Kaze', 'Finx', 'Jae-Yong', 'Alli'
+];
+
+knownBrawlerNames.forEach((name) => {
+  if (!brawlers.some((brawler) => brawler.name === name)) {
+    brawlers.push({ name, rarity: 'inconnue', type: 'inconnu' });
+  }
+});
+
 const questions = [
   { text: 'Est-ce un brawler légendaire ?', key: 'rarity', value: 'legendary' },
   { text: 'Est-ce un brawler à distance ?', key: 'ranged', value: true },
@@ -35,7 +52,14 @@ const progressBar = document.querySelector('#progress-bar');
 
 function chooseQuestion() {
   const available = questions.filter((question) => !askedQuestions.includes(question));
-  return available.sort((first, second) => scoreQuestion(second) - scoreQuestion(first))[0] || null;
+  const usefulQuestion = available
+    .sort((first, second) => scoreQuestion(second) - scoreQuestion(first))
+    .find((question) => scoreQuestion(question) > 0);
+  if (usefulQuestion) return usefulQuestion;
+  const nextCandidate = candidates.find((brawler) => !askedQuestions.some((question) => question.key === 'name' && question.value === brawler.name));
+  return nextCandidate
+    ? { text: `Est-ce ${nextCandidate.name} ?`, key: 'name', value: nextCandidate.name }
+    : null;
 }
 
 function scoreQuestion(question) {
