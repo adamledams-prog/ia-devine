@@ -19,7 +19,7 @@ const knownBrawlerNames = [
   'Byron', 'Squeak', 'Lou', 'Ruffs', 'Buzz', 'Fang', 'Eve', 'Janet', 'Otis', 'Buster', 'Gray',
   'Willow', 'Doug', 'Chuck', 'Charlie', 'Mico', 'Melodie', 'Lily', 'Draco', 'Kenji', 'Juju',
   'Meeple', 'Lumi', 'Clancy', 'Kit', 'Cordelius', 'R-T', 'Amber', 'Meg', 'Surge', 'Crow', 'Sandy',
-  'Chester', 'Kaze', 'Finx', 'Jae-Yong', 'Alli'
+  'Chester', 'Kaze', 'Finx', 'Jae-Yong', 'Alli', 'Cosmo', 'Vince'
 ];
 
 knownBrawlerNames.forEach((name) => {
